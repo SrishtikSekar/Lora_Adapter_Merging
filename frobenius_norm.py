@@ -1,6 +1,6 @@
 def frobenius_norm(deltas):
     model_norms={}
-    for layer_name,delta in deltas:
+    for layer_name,delta in deltas.items():
         model_norms[layer_name]=delta.norm(p="fro").item()
     import matplotlib.pyplot as plt
 
